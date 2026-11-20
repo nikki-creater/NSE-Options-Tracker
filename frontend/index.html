@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Options Tracker | NSE</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar">
+        <div class="logo">
+          <div class="logo-icon">📊</div>
+          <div>
+            <h2>Options</h2>
+            <span>TRACKER</span>
+          </div>
+        </div>
+
+        <div class="sidebar-content">
+          <div class="side-label">MARKET SETTINGS</div>
+
+          <label for="expiryDropdown">Expiry Date</label>
+          <select id="expiryDropdown">
+            <option value="">Loading expiry...</option>
+          </select>
+
+          <button id="editButton" class="edit-btn">⚙ Edit / Settings</button>
+
+          <div class="sidebar-divider"></div>
+
+          <div class="connection-box">
+            <div class="connection-title">NSE CONNECTION</div>
+            <div class="connection-status">
+              <span class="status-dot"></span>
+              <span id="connectionStatus">Checking...</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="sidebar-footer">OPTIONS TRACKER v1.0</div>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div class="page-title">
+            <h1>Options Tracker</h1>
+            <p>NSE Equity Derivatives Dashboard</p>
+          </div>
+
+          <div class="top-actions">
+            <div class="market-indicator">
+              <span class="status-dot"></span>
+              NSE Market Data
+            </div>
+
+            <!-- COUNTDOWN TIMER -->
+            <div class="refresh-timer">
+              Next Refresh: <span id="countdown">10</span>s
+            </div>
+
+            <button id="refreshButton" class="refresh-btn">↻ Refresh</button>
+          </div>
+        </header>
+
+        <section class="tables-section">
+          <div class="section-heading">
+            <div>
+              <h2>Option Chain Details</h2>
+              <p>Call Option (CE) and Put Option (PE)</p>
+            </div>
+
+            <div class="table-status" id="tableStatus">
+              Waiting for selection
+            </div>
+          </div>
+
+          <div id="optionTables">
+            <div class="empty-state">
+              <div class="empty-icon">📊</div>
+              <h3>Welcome to Options Tracker</h3>
+              <p>Select an expiry date to view option chain data.</p>
+            </div>
+          </div>
+        </section>
+
+        <footer class="main-footer">
+          <span>Options Tracker | Data source: NSE India</span>
+          <span id="lastUpdated">Last Updated: --</span>
+        </footer>
+      </main>
+    </div>
+
+    <!-- SETTINGS MODAL -->
+    <div class="modal" id="settingsModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <div>
+            <h2>⚙ Edit Settings</h2>
+            <p>Configure expiry date and symbols</p>
+          </div>
+          <button id="closeModal" class="close-btn">×</button>
+        </div>
+
+        <div class="form-group">
+          <label for="settingsExpiry">Expiry Date</label>
+          <select id="settingsExpiry">
+            <option value="">Select Expiry Date</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="symbolDropdown">Select Symbols</label>
+          <select id="symbolDropdown" multiple size="9"></select>
+          <small>
+            Select ALL SYMBOLS for the full watchlist. Use Ctrl + Click to
+            select individual symbols.
+          </small>
+        </div>
+
+        <div class="modal-actions">
+          <button id="cancelSettings" class="cancel-btn">Cancel</button>
+          <button id="saveSettings" class="save-btn">Apply Settings</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOADING -->
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="loader"></div>
+      <p>Fetching NSE Option Chain...</p>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
