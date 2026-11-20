@@ -1,0 +1,801 @@
+```html
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Steel Plant Construction Management System</title>
+
+    <link rel="stylesheet" href="home.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+         NAVBAR
+    ====================================================== -->
+
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="brand">
+          <div class="brand-icon">🏗️</div>
+
+          <div class="brand-text">
+            <h2>Steel Plant</h2>
+            <span>Construction CMS</span>
+          </div>
+        </div>
+
+        <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+
+        <nav class="nav-menu" id="navMenu">
+          <a href="#home" class="nav-link active"> Home </a>
+
+          <a href="#about" class="nav-link"> About </a>
+
+          <a href="#features" class="nav-link"> Features </a>
+
+          <a href="#modules" class="nav-link"> Modules </a>
+
+          <a href="#workflow" class="nav-link"> Workflow </a>
+
+          <a href="#contact" class="nav-link"> Contact </a>
+
+          <button class="login-btn" onclick="goToLogin()">Login</button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- =====================================================
+         HERO SECTION
+    ====================================================== -->
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-overlay"></div>
+
+        <div class="hero-container">
+          <div class="hero-content">
+            <div class="hero-badge">🏗️ Smart Construction Management</div>
+
+            <h1>
+              Building India's
+              <span>Industrial Future</span>
+            </h1>
+
+            <p>
+              A centralized Construction Management System designed to
+              efficiently manage steel plant projects, employees, vendors,
+              materials, equipment, finance, safety and daily work progress.
+            </p>
+
+            <div class="hero-buttons">
+              <button class="primary-btn" onclick="goToLogin()">
+                Get Started
+                <span>→</span>
+              </button>
+
+              <a href="#features" class="secondary-btn">
+                Explore System
+                <span>↓</span>
+              </a>
+            </div>
+
+            <div class="hero-trust">
+              <div class="trust-item">
+                <strong>7+</strong>
+                <span>User Roles</span>
+              </div>
+
+              <div class="trust-line"></div>
+
+              <div class="trust-item">
+                <strong>15+</strong>
+                <span>Management Modules</span>
+              </div>
+
+              <div class="trust-line"></div>
+
+              <div class="trust-item">
+                <strong>24/7</strong>
+                <span>Data Access</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- DASHBOARD PREVIEW -->
+
+          <div class="hero-dashboard">
+            <div class="preview-window">
+              <div class="preview-header">
+                <div class="window-dots">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </div>
+
+                <div class="preview-title">Steel Plant CMS</div>
+
+                <div class="preview-status">● Online</div>
+              </div>
+
+              <div class="preview-body">
+                <div class="preview-sidebar">
+                  <div class="preview-logo">🏗️</div>
+
+                  <div class="preview-side-item active">📊</div>
+
+                  <div class="preview-side-item">📁</div>
+
+                  <div class="preview-side-item">👷</div>
+
+                  <div class="preview-side-item">🏢</div>
+
+                  <div class="preview-side-item">💰</div>
+
+                  <div class="preview-side-item">🧱</div>
+
+                  <div class="preview-side-item">⚙️</div>
+                </div>
+
+                <div class="preview-main">
+                  <div class="preview-top">
+                    <div>
+                      <h4>Project Dashboard</h4>
+                      <small>Steel Plant Construction</small>
+                    </div>
+
+                    <div class="preview-user">👤 Admin</div>
+                  </div>
+
+                  <div class="mini-cards">
+                    <div class="mini-card">
+                      <span>Projects</span>
+                      <strong>24</strong>
+                      <small>↑ 12%</small>
+                    </div>
+
+                    <div class="mini-card">
+                      <span>Employees</span>
+                      <strong>186</strong>
+                      <small>↑ 8%</small>
+                    </div>
+
+                    <div class="mini-card">
+                      <span>Budget</span>
+                      <strong>₹52Cr</strong>
+                      <small>On Track</small>
+                    </div>
+
+                    <div class="mini-card">
+                      <span>Safety</span>
+                      <strong>98%</strong>
+                      <small>Excellent</small>
+                    </div>
+                  </div>
+
+                  <div class="preview-chart-section">
+                    <div class="chart-box">
+                      <div class="chart-heading">
+                        <span>Project Progress</span>
+                        <strong>78%</strong>
+                      </div>
+
+                      <div class="fake-chart">
+                        <div class="chart-line line-1"></div>
+                        <div class="chart-line line-2"></div>
+                        <div class="chart-line line-3"></div>
+
+                        <div class="chart-bars">
+                          <span style="height: 35%"></span>
+                          <span style="height: 48%"></span>
+                          <span style="height: 42%"></span>
+                          <span style="height: 65%"></span>
+                          <span style="height: 58%"></span>
+                          <span style="height: 78%"></span>
+                          <span style="height: 88%"></span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="activity-box">
+                      <div class="chart-heading">
+                        <span>Recent Activity</span>
+                        <span>•••</span>
+                      </div>
+
+                      <div class="activity-item">
+                        <i>✓</i>
+                        <div>
+                          <strong>Project Updated</strong>
+                          <small>5 min ago</small>
+                        </div>
+                      </div>
+
+                      <div class="activity-item">
+                        <i>👷</i>
+                        <div>
+                          <strong>Employee Added</strong>
+                          <small>18 min ago</small>
+                        </div>
+                      </div>
+
+                      <div class="activity-item">
+                        <i>🧱</i>
+                        <div>
+                          <strong>Material Received</strong>
+                          <small>32 min ago</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             STATS
+        ====================================================== -->
+
+      <section class="stats-section">
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-icon">📁</div>
+
+            <div>
+              <h3 class="counter" data-target="150">0</h3>
+              <p>Projects Managed</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">👷</div>
+
+            <div>
+              <h3 class="counter" data-target="2500">0</h3>
+              <p>Employees</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🏢</div>
+
+            <div>
+              <h3 class="counter" data-target="350">0</h3>
+              <p>Vendors</p>
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🏗️</div>
+
+            <div>
+              <h3 class="counter" data-target="98">0</h3>
+              <p>Safety Score %</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             ABOUT
+        ====================================================== -->
+
+      <section class="about-section section" id="about">
+        <div class="section-container">
+          <div class="about-image">
+            <div class="about-image-card">
+              <div class="about-building">🏭</div>
+
+              <div class="image-overlay-card">
+                <strong> Steel Plant CMS </strong>
+
+                <span> One Platform • Complete Control </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <div class="section-tag">ABOUT THE SYSTEM</div>
+
+            <h2>
+              Complete Control Over
+              <span>Construction Operations</span>
+            </h2>
+
+            <p>
+              Steel Plant Construction Management System is an integrated
+              digital platform designed to simplify and automate construction
+              management activities across large industrial projects.
+            </p>
+
+            <p>
+              The system connects project managers, site engineers, HR teams,
+              finance teams, safety officers, store managers and administrators
+              through a centralized platform.
+            </p>
+
+            <div class="about-points">
+              <div class="about-point">
+                <span>✓</span>
+                <p>Centralized project management</p>
+              </div>
+
+              <div class="about-point">
+                <span>✓</span>
+                <p>Real-time project progress tracking</p>
+              </div>
+
+              <div class="about-point">
+                <span>✓</span>
+                <p>Employee and workforce management</p>
+              </div>
+
+              <div class="about-point">
+                <span>✓</span>
+                <p>Material and equipment monitoring</p>
+              </div>
+
+              <div class="about-point">
+                <span>✓</span>
+                <p>Financial and budget management</p>
+              </div>
+
+              <div class="about-point">
+                <span>✓</span>
+                <p>Safety and incident management</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             FEATURES
+        ====================================================== -->
+
+      <section class="features-section section" id="features">
+        <div class="section-container">
+          <div class="section-heading">
+            <div class="section-tag">POWERFUL FEATURES</div>
+
+            <h2>
+              Everything You Need
+              <span>In One Platform</span>
+            </h2>
+
+            <p>
+              Manage every aspect of your steel plant construction project from
+              a single centralized system.
+            </p>
+          </div>
+
+          <div class="features-grid">
+            <div class="feature-card">
+              <div class="feature-icon">📊</div>
+
+              <h3>Smart Dashboard</h3>
+
+              <p>
+                Monitor projects, employees, budgets, materials, equipment and
+                safety information from one dashboard.
+              </p>
+
+              <a href="#modules"> Learn More → </a>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">📁</div>
+
+              <h3>Project Management</h3>
+
+              <p>
+                Create, update and monitor construction projects, budgets,
+                schedules, progress and project status.
+              </p>
+
+              <a href="#modules"> Learn More → </a>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">👷</div>
+
+              <h3>Workforce Management</h3>
+
+              <p>
+                Manage employees, attendance, salary information and workforce
+                allocation efficiently.
+              </p>
+
+              <a href="#modules"> Learn More → </a>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🧱</div>
+
+              <h3>Material Management</h3>
+
+              <p>
+                Track material stock, material issues and supplies throughout
+                the construction lifecycle.
+              </p>
+
+              <a href="#modules"> Learn More → </a>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">💰</div>
+
+              <h3>Finance Management</h3>
+
+              <p>
+                Track expenses, project budgets and salary payments with better
+                financial visibility.
+              </p>
+
+              <a href="#modules"> Learn More → </a>
+            </div>
+
+            <div class="feature-card">
+              <div class="feature-icon">🛡️</div>
+
+              <h3>Safety Management</h3>
+
+              <p>
+                Record safety activities, incidents and maintain better safety
+                standards across project sites.
+              </p>
+
+              <a href="#modules"> Learn More → </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             MODULES
+        ====================================================== -->
+
+      <section class="modules-section section" id="modules">
+        <div class="section-container">
+          <div class="section-heading">
+            <div class="section-tag">SYSTEM MODULES</div>
+
+            <h2>
+              One System,
+              <span>Multiple Solutions</span>
+            </h2>
+
+            <p>
+              All major construction management operations are organized into
+              dedicated modules.
+            </p>
+          </div>
+
+          <div class="modules-grid">
+            <div class="module-card">
+              <div class="module-number">01</div>
+              <div class="module-icon">📊</div>
+              <h3>Dashboard</h3>
+              <p>Centralized project overview and analytics.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">02</div>
+              <div class="module-icon">📁</div>
+              <h3>Projects</h3>
+              <p>Project details and daily work progress.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">03</div>
+              <div class="module-icon">👷</div>
+              <h3>Employees</h3>
+              <p>Employee, attendance and salary management.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">04</div>
+              <div class="module-icon">🏢</div>
+              <h3>Customers</h3>
+              <p>Manage customer and client information.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">05</div>
+              <div class="module-icon">🤝</div>
+              <h3>Vendors</h3>
+              <p>Vendor details and material supply tracking.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">06</div>
+              <div class="module-icon">💰</div>
+              <h3>Finance</h3>
+              <p>Expenses, salary payments and project budgets.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">07</div>
+              <div class="module-icon">🚛</div>
+              <h3>Vehicles</h3>
+              <p>Vehicle details and usage management.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">08</div>
+              <div class="module-icon">🧱</div>
+              <h3>Materials</h3>
+              <p>Material stock and issue management.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">09</div>
+              <div class="module-icon">⚙️</div>
+              <h3>Equipment</h3>
+              <p>Equipment details and maintenance tracking.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">10</div>
+              <div class="module-icon">🛡️</div>
+              <h3>Safety</h3>
+              <p>Safety records and incident management.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">11</div>
+              <div class="module-icon">📑</div>
+              <h3>Reports</h3>
+              <p>Generate comprehensive management reports.</p>
+            </div>
+
+            <div class="module-card">
+              <div class="module-number">12</div>
+              <div class="module-icon">🔔</div>
+              <h3>Notifications</h3>
+              <p>Stay updated with important system activities.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             WORKFLOW
+        ====================================================== -->
+
+      <section class="workflow-section section" id="workflow">
+        <div class="section-container">
+          <div class="section-heading">
+            <div class="section-tag">SIMPLE WORKFLOW</div>
+
+            <h2>
+              How The System
+              <span>Works</span>
+            </h2>
+
+            <p>
+              A simple and structured workflow for managing construction
+              operations.
+            </p>
+          </div>
+
+          <div class="workflow">
+            <div class="workflow-line"></div>
+
+            <div class="workflow-item">
+              <div class="workflow-circle">01</div>
+
+              <div class="workflow-content">
+                <div class="workflow-icon">🔐</div>
+
+                <h3>Login</h3>
+
+                <p>
+                  Authorized users securely access the system using their
+                  credentials and assigned role.
+                </p>
+              </div>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-circle">02</div>
+
+              <div class="workflow-content">
+                <div class="workflow-icon">📊</div>
+
+                <h3>Dashboard</h3>
+
+                <p>
+                  View project status, activities, budgets, workforce and key
+                  performance information.
+                </p>
+              </div>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-circle">03</div>
+
+              <div class="workflow-content">
+                <div class="workflow-icon">📝</div>
+
+                <h3>Manage Data</h3>
+
+                <p>
+                  Add and update projects, employees, vendors, materials,
+                  equipment and financial records.
+                </p>
+              </div>
+            </div>
+
+            <div class="workflow-item">
+              <div class="workflow-circle">04</div>
+
+              <div class="workflow-content">
+                <div class="workflow-icon">📈</div>
+
+                <h3>Monitor & Report</h3>
+
+                <p>
+                  Track progress and generate reports for effective management
+                  decisions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             CTA
+        ====================================================== -->
+
+      <section class="cta-section">
+        <div class="cta-container">
+          <div class="cta-content">
+            <div class="cta-icon">🏗️</div>
+
+            <h2>
+              Ready to Manage Your
+              <span>Construction Projects Smarter?</span>
+            </h2>
+
+            <p>
+              Access the Steel Plant Construction Management System and take
+              complete control of your project operations.
+            </p>
+
+            <button class="cta-button" onclick="goToLogin()">
+              Enter System
+              <span>→</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- =====================================================
+             CONTACT
+        ====================================================== -->
+
+      <section class="contact-section section" id="contact">
+        <div class="section-container">
+          <div class="section-heading">
+            <div class="section-tag">CONTACT</div>
+
+            <h2>
+              Get In
+              <span>Touch</span>
+            </h2>
+
+            <p>
+              Have questions about the Construction Management System? Contact
+              the administration team.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+
+              <h3>Project Sites</h3>
+
+              <p>Steel Plant Construction Sites</p>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+
+              <h3>Email</h3>
+
+              <p>support@steelplantcms.com</p>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">📞</div>
+
+              <h3>Support</h3>
+
+              <p>Available for system assistance</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-brand">
+          <div class="brand">
+            <div class="brand-icon">🏗️</div>
+
+            <div class="brand-text">
+              <h2>Steel Plant</h2>
+
+              <span> Construction CMS </span>
+            </div>
+          </div>
+
+          <p>
+            Smart digital management for modern steel plant construction
+            projects.
+          </p>
+        </div>
+
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#features">Features</a>
+          <a href="#modules">Modules</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>System</h4>
+
+          <a href="#modules">Projects</a>
+          <a href="#modules">Employees</a>
+          <a href="#modules">Finance</a>
+          <a href="#modules">Materials</a>
+          <a href="#modules">Safety</a>
+        </div>
+
+        <div class="footer-login">
+          <h4>Access System</h4>
+
+          <p>Login to access the Construction Management Dashboard.</p>
+
+          <button onclick="goToLogin()" class="footer-login-btn">
+            Login to System →
+          </button>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          © <span id="footerYear"></span>
+          Steel Plant Construction Management System. All Rights Reserved.
+        </p>
+
+        <div>Built for Industrial Construction Management 🏗️</div>
+      </div>
+    </footer>
+
+    <!-- =====================================================
+         BACK TO TOP
+    ====================================================== -->
+
+    <button class="back-to-top" id="backToTop" title="Back to Top">↑</button>
+
+    <script src="home.js"></script>
+  </body>
+</html>
+```
