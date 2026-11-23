@@ -663,6 +663,6 @@ setInterval(async () => {
     countdownValue = 10;
 
     // Refresh NSE data only
-    await loadOptionChain();
+    await loadOptionTables(true);
   }
 }, 1000);
