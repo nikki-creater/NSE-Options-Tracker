@@ -3,7 +3,7 @@
    HTML + CSS + JavaScript
 ===================================================== */
 
-const API_URL = "/api";
+const API_URL = "https://nse-options-tracker-1.onrender.com/api";
 
 const $ = (id) => document.getElementById(id);
 
